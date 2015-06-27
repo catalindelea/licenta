@@ -1,0 +1,7 @@
+c=10000000
+while [ $c -le 10010000 ]
+do
+	echo "$c"
+	(( c++ ))
+	sleep 5
+done
