@@ -8,8 +8,6 @@ public class Main {
 		try {
 			Process process = ReadNFC.startConsoleProcess();
 			ReadNFC.readConsoleOutput(process);
-			
-//			ReadNFC.test();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
