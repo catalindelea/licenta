@@ -14,6 +14,7 @@ public class OutputValidator {
 		} catch (Exception e) {
 			result = false;
 			logger.error(e);
+			e.printStackTrace();
 		}
 		return result;
 	}

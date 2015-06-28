@@ -20,13 +20,14 @@ public class MQTTSender {
             connOpts.setCleanSession(true);
             connOpts.setKeepAliveInterval(2000000);
             client.connect(connOpts);
-//            System.out.println("Publishing message: "+output);
-            MqttMessage message = new MqttMessage(output.getBytes());
+            String mesaj = "R#"+output;
+            MqttMessage message = new MqttMessage(mesaj.getBytes());
             message.setQos(QOS);
             client.publish(TOPIC, message);
             client.disconnect();
         } catch(MqttException me) {
         	logger.error(me);
+        	me.printStackTrace();
         }
 	}
 

@@ -11,6 +11,7 @@ public class Main {
 			Process process = ReadNFC.startConsoleProcess();
 			ReadNFC.readConsoleOutput(process);
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.error(e);
 		}
 	}

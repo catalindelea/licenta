@@ -31,6 +31,7 @@ public class ReadNFC {
 			}
 		} catch (IOException e) {
 			logger.error(e);
+			e.printStackTrace();
 		}
 	}
 }
