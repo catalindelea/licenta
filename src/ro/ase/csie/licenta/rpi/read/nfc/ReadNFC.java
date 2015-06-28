@@ -6,9 +6,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import org.apache.log4j.Logger;
+
 import static ro.ase.csie.licenta.rpi.util.ConstantParams.*;
 
 public class ReadNFC {
+	private static Logger logger = Logger.getLogger(ReadNFC.class);
 	public static Process startConsoleProcess() throws Exception {
 		File f = new File(PROCESS_NAME);
 		if (!f.exists())
@@ -27,7 +30,7 @@ public class ReadNFC {
 				}
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(e);
 		}
 	}
 }
